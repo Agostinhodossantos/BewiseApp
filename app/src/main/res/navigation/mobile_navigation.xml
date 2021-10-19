@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_study"
         android:name="com.app.bewise.ui.study.StudyFragment"
         android:label="@string/menu_study"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.app.bewise.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:id="@+id/nav_news"
+        android:name="com.app.bewise.ui.news.NewsFragment"
+        android:label="@string/menu_news"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
