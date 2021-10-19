@@ -13,8 +13,8 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.app.bewise.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:name="com.app.bewise.ui.study.StudyFragment"
+        android:label="@string/menu_study"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
