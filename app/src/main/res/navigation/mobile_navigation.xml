@@ -22,4 +22,11 @@
         android:name="com.app.bewise.ui.news.NewsFragment"
         android:label="@string/menu_news"
         tools:layout="@layout/fragment_slideshow" />
+
+    <activity
+        android:id="@+id/nav_jobs"
+        android:name="com.app.bewise.ui.jobs.JobsActivity"
+        android:label="@string/jobs"
+        tools:layout="@layout/activity_jobs"
+        />
 </navigation>
