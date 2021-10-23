@@ -1,5 +1,7 @@
 package com.app.bewise;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        navigationView.setItemIconTintList(ColorStateList.valueOf(Color.GRAY));
+
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 

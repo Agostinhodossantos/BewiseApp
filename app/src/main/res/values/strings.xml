@@ -7,7 +7,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Inicio</string>
+    <string name="menu_home">Bewise</string>
     <string name="menu_study">Estudos</string>
     <string name="menu_news">Novidades</string>
 
@@ -22,4 +22,6 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="card_top_title">Amprenda jogando</string>
+    <string name="card_top_body">Lorem ipsum consectetur adipiscing elit consectetur</string>
 </resources>

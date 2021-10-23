@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.app.bewise.R;
+
 public class JobsActivity extends AppCompatActivity {
 
     @Override
