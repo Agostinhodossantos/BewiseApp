@@ -4,8 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="6dp"
     app:cardElevation="8dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="24dp"
     app:cardCornerRadius="20dp"
-    android:layout_margin="10dp"
     android:layout_height="170dp">
 
     <RelativeLayout
