@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
@@ -13,22 +14,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Frase do dia"
         android:layout_marginTop="5dp"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/blue"
+        android:drawableLeft="@drawable/ic_baseline_explore_24"
+        android:text="Explore a Bewise"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:layout_marginStart="10dp"
         />
 
-    <include layout="@layout/item_tips"/>
+    <include layout="@layout/home_menu_layout"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Oque tu q"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        android:layout_marginStart="10dp"
-        />
+
+
+
     <TextView
         android:id="@+id/text_home"
         android:layout_width="match_parent"
