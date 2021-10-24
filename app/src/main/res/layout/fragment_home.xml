@@ -59,6 +59,9 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
             <include layout="@layout/item_input_search"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
 
             <TextView
                 android:id="@+id/text_home"
