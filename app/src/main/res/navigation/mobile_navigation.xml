@@ -29,4 +29,13 @@
         android:label="@string/jobs"
         tools:layout="@layout/activity_jobs"
         />
+
+    <activity
+        android:id="@+id/nav_library"
+        android:name="com.app.bewise.ui.library.LibraryActivity"
+        android:label="@string/library"
+        tools:layout="@layout/activity_library"
+        />
+
+
 </navigation>
