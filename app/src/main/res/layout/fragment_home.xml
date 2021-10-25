@@ -61,7 +61,7 @@
             <include layout="@layout/item_input_search"/>
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="100dp"/>
+                android:layout_height="230dp"/>
 
             <TextView
                 android:id="@+id/text_home"
