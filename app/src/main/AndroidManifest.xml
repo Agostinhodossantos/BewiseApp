@@ -14,6 +14,9 @@
         android:theme="@style/Theme.Bewise">
         <activity android:name=".ui.library.LibraryActivity"></activity>
         <activity
+            android:name=".ui.tools.ToolsActivity"
+            android:exported="true" />
+        <activity
             android:name=".ui.jobs.JobsActivity"
             android:exported="true" />
         <activity
