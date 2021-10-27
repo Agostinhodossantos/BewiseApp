@@ -44,6 +44,8 @@
             android:layout_below="@id/ll_search"
             style="@style/CustomCardViewStyle"
             android:layout_marginTop="60dp"
+            app:cardElevation="3dp"
+            android:elevation="3dp"
             android:layout_marginStart="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
