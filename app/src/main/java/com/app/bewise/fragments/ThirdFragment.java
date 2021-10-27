@@ -1,4 +1,4 @@
-package com.app.bewise.ui.library.fragments;
+package com.app.bewise.fragments;
 
 import android.os.Bundle;
 

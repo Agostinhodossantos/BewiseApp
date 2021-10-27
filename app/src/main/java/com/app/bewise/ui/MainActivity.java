@@ -1,4 +1,4 @@
-package com.app.bewise;
+package com.app.bewise.ui;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.app.bewise.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
