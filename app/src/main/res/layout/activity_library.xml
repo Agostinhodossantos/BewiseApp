@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,133 +8,150 @@
     android:background="#F8F8F8"
     android:layout_height="match_parent"
     tools:context=".ui.library.LibraryActivity">
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="match_parent"
-            android:src="@drawable/img2"
-            android:scaleType="centerCrop"
-            android:layout_height="230dp"/>
-        <LinearLayout
-            android:id="@+id/ll_search"
-            android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:gravity="center_vertical"
-            android:background="@drawable/bg_search"
-            android:layout_height="50dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:src="@drawable/ic_baseline_search_24"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="Pesquisar, Loren ipsun"
-                />
-        </LinearLayout>
+        android:layout_height="match_parent">
 
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_below="@id/ll_search"
-            style="@style/CustomCardViewStyle"
-            android:layout_marginTop="60dp"
-            app:cardElevation="1dp"
-            android:elevation="1dp"
-            android:layout_marginStart="10dp"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:orientation="vertical"
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                >
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginTop="10dp"
+                android:src="@drawable/img2"
+                android:scaleType="centerCrop"
+                android:layout_height="230dp"/>
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_search"
+                android:layout_height="50dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_baseline_search_24"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="18sp"
-                            android:text="Discover new"
-                            android:textAppearance="?attr/textAppearanceHeadline6"
-                            />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="4dp"
-                            android:text="Hint new books before other"
-                            />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ver mais"
-                        android:textColor="?android:attr/textColorSecondary"
-                        android:textAllCaps="false"
-                        android:textAlignment="textEnd"
-                        android:textSize="14sp"
-                        style="?attr/borderlessButtonStyle"
-
-                        />
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    >
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_books"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-
-                </LinearLayout>
-
-
+                    android:text="Pesquisar, Loren ipsun"
+                    />
             </LinearLayout>
 
 
-        </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_below="@id/ll_search"
+                style="@style/CustomCardViewStyle"
+                android:layout_marginTop="60dp"
+                app:cardElevation="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:text="Discover new"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Hint new books before other"
+                                />
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ver mais"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:textAllCaps="false"
+                            android:textAlignment="textEnd"
+                            android:textSize="14sp"
+                            style="?attr/borderlessButtonStyle"
+
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_books"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
 
 
-    </RelativeLayout>
+                </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_books_category"
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categorias"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="18sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_books_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+
+
+
 
     </LinearLayout>
 
-
-
-
-</LinearLayout>
+</ScrollView>
