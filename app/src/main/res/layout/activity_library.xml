@@ -50,8 +50,11 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_below="@id/ll_search"
                 style="@style/CustomCardViewStyle"
+                android:clipToPadding="true"
                 android:layout_marginTop="60dp"
-                app:cardElevation="5dp"
+                app:cardElevation="3dp"
+                android:elevation="3dp"
+                app:cardMaxElevation="3dp"
                 android:layout_marginStart="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
