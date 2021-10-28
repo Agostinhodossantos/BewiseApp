@@ -78,7 +78,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textSize="18sp"
-                                android:text="Discover new"
+                                android:text="Descubra novos"
                                 android:textAppearance="?attr/textAppearanceHeadline6"
                                 />
 
