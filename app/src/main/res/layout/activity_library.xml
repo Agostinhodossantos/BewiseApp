@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:background="#F8F8F8"
     android:layout_height="match_parent"
     tools:context=".ui.library.LibraryActivity">
@@ -44,8 +45,8 @@
             android:layout_below="@id/ll_search"
             style="@style/CustomCardViewStyle"
             android:layout_marginTop="60dp"
-            app:cardElevation="3dp"
-            android:elevation="3dp"
+            app:cardElevation="1dp"
+            android:elevation="1dp"
             android:layout_marginStart="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -119,6 +120,21 @@
 
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_books_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>
