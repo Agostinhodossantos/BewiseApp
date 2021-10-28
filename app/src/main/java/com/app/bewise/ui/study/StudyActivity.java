@@ -16,7 +16,10 @@ public class StudyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_study);
 
         initUI();
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     private void initUI() {
