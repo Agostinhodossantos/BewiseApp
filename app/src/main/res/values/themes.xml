@@ -22,6 +22,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--  Left corner cardview  -->
     <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
     </style>
@@ -34,6 +35,24 @@
         <item name="cornerSizeTopRight">0dp</item>
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
+    <!--  Close left corner cardview  -->
+
+
+
+    <!--  Left corner cardview  -->
+    <style name="CustomCardViewStyleBottom" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners_bottom</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_bottom" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+    </style>
+    <!--  Close left corner cardview  -->
 
     <style name="Theme.Bewise.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

@@ -11,11 +11,6 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_study"
-        android:name="com.app.bewise.ui.study.StudyFragment"
-        android:label="@string/menu_study"
-        tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_news"
@@ -28,6 +23,13 @@
         android:name="com.app.bewise.ui.jobs.JobsActivity"
         android:label="@string/jobs"
         tools:layout="@layout/activity_jobs"
+        />
+
+    <activity
+        android:id="@+id/nav_study"
+        android:name="com.app.bewise.ui.study.StudyActivity"
+        android:label="@string/menu_study"
+        tools:layout="@layout/activity_study"
         />
 
     <activity

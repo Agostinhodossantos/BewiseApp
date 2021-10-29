@@ -7,13 +7,17 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:hardwareAccelerated="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bewise">
-        <activity android:name=".ui.library.LibraryActivity"></activity>
+        <activity
+            android:name=".ui.study.StudyActivity"
+            android:parentActivityName=".ui.MainActivity"
+            />
+        <activity android:name=".ui.library.LibraryActivity" />
         <activity
             android:name=".ui.tools.ToolsActivity"
             android:exported="true" />
