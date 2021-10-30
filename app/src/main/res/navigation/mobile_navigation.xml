@@ -21,7 +21,7 @@
     <activity
         android:id="@+id/nav_jobs"
         android:name="com.app.bewise.ui.jobs.JobsActivity"
-        android:label="@string/jobs"
+        android:label="@string/menu_jobs"
         tools:layout="@layout/activity_jobs"
         />
 
@@ -35,7 +35,15 @@
     <activity
         android:id="@+id/nav_library"
         android:name="com.app.bewise.ui.library.LibraryActivity"
-        android:label="@string/library"
+        android:label="@string/menu_library"
+        tools:layout="@layout/activity_library"
+        />
+
+
+    <activity
+        android:id="@+id/nav_suport"
+        android:name="com.app.bewise.ui.main.SuportActivity"
+        android:label="@string/menu_suport"
         tools:layout="@layout/activity_library"
         />
 
