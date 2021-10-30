@@ -15,7 +15,9 @@
         android:theme="@style/Theme.Bewise" >
         <activity
             android:name=".ui.library.BookListActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".ui.library.LibraryActivity"
+            />
         <activity
             android:name=".ui.study.StudyActivity"
             android:parentActivityName=".ui.main.MainActivity" />
