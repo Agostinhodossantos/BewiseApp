@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="6dp"
+    app:cardElevation="8dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="24dp"
+    app:cardCornerRadius="20dp"
+    android:layout_height="170dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_bg_bottom_wave"
+            />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_toStartOf="@+id/floatingActionButton"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/card_top_title"
+                        android:layout_marginBottom="10dp"
+                        android:textStyle="bold"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/card_top_body" />
+
+
+                </LinearLayout>
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:tint="@android:color/white"
+                    app:tint="@android:color/white"
+                    app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:riv_corner_radius="50dp"
+                app:riv_border_color="@color/purple_700"
+                app:riv_border_width="1dp"
+                android:src="@drawable/img"
+                android:scaleType="centerCrop"
+                />
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                app:riv_corner_radius="50dp"
+                app:riv_border_color="@color/purple_700"
+                app:riv_border_width="1dp"
+                android:layout_marginStart="-15dp"
+                android:src="@drawable/img1"
+                android:scaleType="centerCrop"
+                />
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="-15dp"
+                app:riv_border_color="@color/purple_700"
+                app:riv_border_width="1dp"
+                app:riv_corner_radius="50dp"
+                android:src="@drawable/img2"
+                android:scaleType="centerCrop"
+                />
+
+
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
