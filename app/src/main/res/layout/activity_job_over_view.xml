@@ -10,29 +10,39 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:orientation="horizontal"
-            android:paddingTop="10dp"
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <TextView
                 android:layout_weight="1"
                 android:text="Want to read"
                 android:layout_width="match_parent"
-                android:layout_margin="10dp"
-                android:background="@drawable/bg_outline"
-                android:layout_height="55dp"/>
+                android:gravity="center"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="10dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_job_filled"
+                android:layout_height="50dp"/>
 
-            <Button
+            <TextView
                 android:layout_weight="1"
                 android:text="Get copy"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:drawableTint="@color/purple_700"
+                android:drawableEnd="@drawable/ic_baseline_file_copy_24"
+                android:layout_marginStart="5dp"
                 android:layout_width="match_parent"
                 android:background="@drawable/bg_outline"
-                android:layout_margin="10dp"
-                android:layout_height="55dp"/>
+                android:layout_height="50dp"/>
 
 
         </LinearLayout>

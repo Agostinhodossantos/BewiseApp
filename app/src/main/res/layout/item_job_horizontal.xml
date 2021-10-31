@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_job_card"
     android:layout_width="180dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -12,6 +13,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_job_cover"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
