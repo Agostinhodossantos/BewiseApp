@@ -27,6 +27,7 @@ public class JobsActivity extends AppCompatActivity {
         initUI();
 
         getJobs();
+        getMyJobs();
     }
 
     private void initUI() {
