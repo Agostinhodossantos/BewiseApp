@@ -199,19 +199,36 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Engine"
-                android:layout_marginStart="30dp"
+                android:text="Jobs engine"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
                 android:textAppearance="?attr/textAppearanceHeadline6"
                 android:textSize="18sp"
                 />
 
-           <include layout="@layout/item_ranking_top"/>
+           <include layout="@layout/item_jobs_engine_banner"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meus trabalhos"
+                android:layout_marginTop="23dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textSize="18sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_my_jobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
         <Space

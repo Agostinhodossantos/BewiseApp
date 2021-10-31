@@ -13,12 +13,12 @@ import com.app.bewise.model.Book;
 
 import java.util.List;
 
-public class JobsListAdapter extends RecyclerView.Adapter<JobsListAdapter.MyViewHolder> {
+public class VerticalJobsListAdapter extends RecyclerView.Adapter<VerticalJobsListAdapter.MyViewHolder> {
 
     private Context mContext;
     private List<Book> bookList;
 
-    public JobsListAdapter(Context mContext, List<Book> bookList) {
+    public VerticalJobsListAdapter(Context mContext, List<Book> bookList) {
         this.mContext = mContext;
         this.bookList = bookList;
     }
@@ -27,7 +27,7 @@ public class JobsListAdapter extends RecyclerView.Adapter<JobsListAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(mContext).inflate(R.layout.item_job_horizontal, parent, false);
+        View v = LayoutInflater.from(mContext).inflate(R.layout.item_book_vertical, parent, false);
 
         MyViewHolder viewHolder = new MyViewHolder(v);
 
