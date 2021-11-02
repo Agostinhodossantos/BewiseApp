@@ -53,9 +53,6 @@ public class LibraryActivity extends AppCompatActivity {
         }
 
 
-
-
-        Toast.makeText(LibraryActivity.this, ""+categoryList.size(), Toast.LENGTH_SHORT).show();
         BooksCategoryAdapter adapter = new BooksCategoryAdapter(this, categoryList);
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL);
         rv_books_category.setLayoutManager(layoutManager);

@@ -2,8 +2,12 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="120dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_category"
     android:layout_margin="8dp"
     android:layout_height="120dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
     app:cardElevation="5dp"
     app:cardCornerRadius="10dp"
     >

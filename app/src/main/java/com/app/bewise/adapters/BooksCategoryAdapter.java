@@ -1,16 +1,19 @@
 package com.app.bewise.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.bewise.R;
 import com.app.bewise.model.Book;
 import com.app.bewise.model.BookCategory;
+import com.app.bewise.ui.library.BookListActivity;
 
 import java.util.List;
 
@@ -37,7 +40,10 @@ public class BooksCategoryAdapter extends RecyclerView.Adapter<BooksCategoryAdap
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        holder.card_category.setOnClickListener(v -> {
+            Intent intent = new Intent(mContext, BookListActivity.class);
+            mContext.startActivity(intent);
+        });
     }
 
 
@@ -48,9 +54,11 @@ public class BooksCategoryAdapter extends RecyclerView.Adapter<BooksCategoryAdap
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
+        private CardView card_category;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            card_category = itemView.findViewById(R.id.card_category);
         }
     }
 }
