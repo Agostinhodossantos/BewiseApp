@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.jobs.JobOverViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/card_action"
+        app:layout_constraintTop_toTopOf="parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:src="@drawable/img2"
+                android:scaleType="centerCrop"
+                />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                app:elevation="0dp"
+                android:theme="@style/Theme.Bewise.AppBarOverlay">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    app:title=""
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:popupTheme="@style/Theme.Bewise.PopupOverlay">
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_marginTop="-50dp"
+            android:background="@android:color/transparent"
+           android:layout_marginBottom="-5dp"
+           android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:riv_corner_radius="10dp"
+                android:translationZ="2dp"
+                android:layout_marginStart="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img"
+                />
+           <com.google.android.material.card.MaterialCardView
+               style="@style/CustomCardViewStyle"
+               android:layout_marginTop="30dp"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+
+               <LinearLayout
+                   android:orientation="vertical"
+                   android:layout_width="match_parent"
+                   android:layout_marginTop="30dp"
+                   android:layout_marginStart="10dp"
+                   android:layout_marginEnd="10dp"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="The martian Sheila"
+                       android:layout_marginTop="10dp"
+                       android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                       />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Agostinho"
+                       />
+
+                 <LinearLayout
+                     android:layout_marginTop="10dp"
+                     android:orientation="horizontal"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content">
+                     <RatingBar
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center_vertical"
+                         android:rating="4"
+                         style="@style/Widget.AppCompat.RatingBar.Small"
+                         />
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="4.14"
+                         android:textSize="12sp"
+                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                         android:layout_marginStart="5dp"
+                         android:layout_gravity="center_vertical"
+                         />
+                 </LinearLayout>
+
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:lineSpacingExtra="2sp"
+                       android:textColor="?android:attr/textColorPrimary"
+                       android:text="Please be careful while executing the following command as you don’t
+want to delete the files by mistake. The best practice is to execute the
+same command with ls –l to make sure you know which files will get
+deleted when you execute the command with rm \n \n
+Please be careful while executing the following command as you don’t
+want to delete the files by mistake. The best practice is to execute the
+same command with ls –l to make sure "
+                       />
+
+               </LinearLayout>
+
+           </com.google.android.material.card.MaterialCardView>
+
+       </RelativeLayout>
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Want to read"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                android:layout_marginEnd="5dp"
+                android:paddingEnd="10dp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_job_filled"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_weight="1"
+                android:text="Get copy"
+                android:gravity="center"
+                android:paddingEnd="10dp"
+                android:drawableTint="@color/purple_700"
+                android:drawableEnd="@drawable/ic_baseline_file_copy_24"
+                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_outline"
+                android:layout_height="50dp"/>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
