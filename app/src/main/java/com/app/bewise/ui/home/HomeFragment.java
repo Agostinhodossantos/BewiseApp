@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.app.bewise.R;
+import com.app.bewise.ui.jobs.JobsActivity;
 import com.app.bewise.ui.study.StudyActivity;
 
 public class HomeFragment extends Fragment {
@@ -33,8 +34,30 @@ public class HomeFragment extends Fragment {
         card_jobs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getContext(), JobsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        card_study.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(getContext(), StudyActivity.class);
                 startActivity(intent);
+            }
+        });
+        
+        card_publication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: 11/2/2021 open publication view 
+            }
+        });
+        
+        card_more.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: 11/2/2021 open drawer  
             }
         });
         return root;
