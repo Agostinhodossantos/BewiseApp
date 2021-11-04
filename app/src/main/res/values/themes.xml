@@ -53,6 +53,12 @@
         <item name="cornerSizeBottomRight">20dp</item>
     </style>
     <!--  Close left corner cardview  -->
+    <!--  Splash  -->
+    <style name="Theme.SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+    <!--  Splash  -->
 
     <style name="Theme.Bewise.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
