@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.bewise.R;
@@ -16,6 +17,7 @@ import com.app.bewise.model.Book;
 import com.app.bewise.model.BookCategory;
 import com.app.bewise.ui.library.BookListActivity;
 import com.google.android.material.card.MaterialCardView;
+
 
 import java.util.List;
 

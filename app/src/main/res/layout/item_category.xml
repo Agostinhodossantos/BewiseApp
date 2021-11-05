@@ -5,6 +5,9 @@
     android:id="@+id/material_card_category"
     android:layout_margin="8dp"
     android:layout_height="120dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
     app:cardElevation="5dp"
     app:cardCornerRadius="10dp"
     >

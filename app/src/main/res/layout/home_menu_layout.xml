@@ -16,6 +16,8 @@
 
             <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_jobs"
+                android:elevation="4dp"
                 app:cardElevation="4dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -89,6 +91,9 @@
 
             <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_study"
+                android:elevation="4dp"
+
                 app:cardElevation="4dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -162,6 +167,9 @@
 
             <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_publication"
+                android:elevation="4dp"
+
                 app:cardElevation="4dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"
@@ -233,6 +241,9 @@
 
             <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_more"
+                android:elevation="4dp"
+
                 app:cardElevation="4dp"
                 android:clickable="true"
                 android:foreground="?attr/selectableItemBackground"

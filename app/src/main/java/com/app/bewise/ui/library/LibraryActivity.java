@@ -47,6 +47,12 @@ public class LibraryActivity extends AppCompatActivity {
 
     private void getCategory() {
         List<BookCategory> categoryList = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            BookCategory category = new BookCategory("a", "", 1);
+            categoryList.add(category);
+        }
+
+
         categoryList.add(new BookCategory("1", "Matematica", 1));
         categoryList.add(new BookCategory("1", "Quimica", 1));
         categoryList.add(new BookCategory("1", "Geografia", 1));
