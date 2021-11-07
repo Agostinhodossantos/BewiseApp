@@ -8,9 +8,9 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Bewise</string>
-    <string name="menu_study">Estudos</string>
-    <string name="menu_news">Publicacoes</string>
+    <string name="menu_study">Estudo</string>
     <string name="menu_library">Biblioteca</string>
+    <string name="menu_news">Publicações</string>
     <string name="menu_jobs">Trabalhos</string>
     <string name="menu_suport">Suporte</string>
 
