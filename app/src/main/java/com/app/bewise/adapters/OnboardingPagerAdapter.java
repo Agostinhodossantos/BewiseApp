@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.app.bewise.R;
 import com.app.bewise.model.Onboarding;
 
 import java.util.List;
@@ -42,8 +43,16 @@ public class OnboardingPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
-        View view = LayoutInflater.from(context).inflate(R.)
+        View view = LayoutInflater.from(context).inflate(R.layout.item_onboarding, null, false);
 
-        return super.instantiateItem(container, position);
+        container.addView(view);
+        return view;
+    }
+
+
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeView((View)object);
+        //destroyItem(container, position, object);
     }
 }
