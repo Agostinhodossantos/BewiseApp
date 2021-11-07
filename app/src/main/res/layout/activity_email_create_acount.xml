@@ -105,6 +105,13 @@
                     android:background="@drawable/bg_filled_btn"
                     />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Ao criar a conta, voce concorda com o nosso Acordo de usuario e afrima que leu a nossa Politica de Privacidade"
+                    />
+
 
             </LinearLayout>
 
