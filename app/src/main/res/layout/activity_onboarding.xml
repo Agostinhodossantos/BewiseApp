@@ -8,6 +8,7 @@
     tools:context=".ui.login.OnboardingActivity">
 
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -15,6 +16,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            app:riv_corner_radius="50dp"
+            android:src="@drawable/ic_launcher"
+            />
 
         <androidx.viewpager.widget.ViewPager
             android:layout_weight="1"
@@ -26,13 +36,11 @@
 
         <me.relex.circleindicator.CircleIndicator
             android:id="@+id/indicator"
-            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="30dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            app:ci_drawable="@drawable/bg_btn_circle"
+            app:ci_drawable="@drawable/bg_filled_btn"
             app:ci_height="6dp"
             app:ci_width="6dp" />
     </LinearLayout>
@@ -46,6 +54,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
+            android:id="@+id/tv_register"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
@@ -57,10 +66,11 @@
             />
 
         <TextView
+            android:id="@+id/tv_login"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="Registar"
+            android:text="Entrar"
             android:textColor="@color/purple_700"
             android:textStyle="bold"
             android:background="@drawable/bg_outline"
