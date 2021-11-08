@@ -10,6 +10,7 @@ import android.view.Menu;
 
 import com.app.bewise.R;
 import com.app.bewise.ui.UserProfileActivity;
+import com.app.bewise.ui.login.OnboardingActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case  R.id.action_img:
-                Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
+                Intent intent = new Intent(MainActivity.this, OnboardingActivity.class);
                 startActivity(intent);
                 return true;
             default:

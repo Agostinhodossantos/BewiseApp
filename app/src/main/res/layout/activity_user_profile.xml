@@ -20,18 +20,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_marginTop="-20dp"
-                app:cardBackgroundColor="@color/purple_700"
+                app:cardBackgroundColor="#3F51B5"
                 app:cardCornerRadius="20dp">
 
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:layout_marginStart="20dp"
-                app:cardUseCompatPadding="true"
                 android:layout_marginTop="80dp"
                 android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="true"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp" />
 
