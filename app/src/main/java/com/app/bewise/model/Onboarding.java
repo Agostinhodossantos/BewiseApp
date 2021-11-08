@@ -1,10 +1,12 @@
 package com.app.bewise.model;
 
+import android.graphics.drawable.Drawable;
+
 public class Onboarding {
     private String title, description;
     private int img;
 
-    public Onboarding(String title, String description, int img) {
+    public Onboarding(String title, String description, Drawable img) {
         this.title = title;
         this.description = description;
         this.img = img;
@@ -28,7 +30,7 @@ public class Onboarding {
         this.description = description;
     }
 
-    public int getImg() {
+    public Drawable getImg() {
         return img;
     }
 

@@ -65,9 +65,9 @@ public class OnboardingActivity extends AppCompatActivity {
 
     private List<Onboarding> getOnboarding() {
         List<Onboarding> onboardings = new ArrayList<>();
-        onboardings.add(new Onboarding("", "", 1));
-        onboardings.add(new Onboarding("", "", 1));
-        onboardings.add(new Onboarding("", "", 1));
+        onboardings.add(new Onboarding("Imersao de ingles da sua casa", "Aprender e treinar os seus conhecimentos enquanto se diverte ", getResources().getDrawable(R.drawable.ilustration1)));
+        onboardings.add(new Onboarding("Imersao de ingles da sua casa", "Aprender e treinar os seus conhecimentos enquanto se diverte ",  getResources().getDrawable(R.drawable.illustration2)));
+        onboardings.add(new Onboarding("Imersao de ingles da sua casa", "Aprender e treinar os seus conhecimentos enquanto se diverte ",  getResources().getDrawable(R.drawable.ilustration1)));
         return onboardings;
     }
 }
