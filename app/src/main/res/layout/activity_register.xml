@@ -55,11 +55,11 @@
         <com.makeramen.roundedimageview.RoundedImageView
             android:layout_width="wrap_content"
             android:layout_height="140dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
             android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/img1"/>
+            android:src="@drawable/login_img"/>
 
         <LinearLayout
             android:orientation="vertical"

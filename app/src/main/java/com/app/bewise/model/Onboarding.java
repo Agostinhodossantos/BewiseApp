@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable;
 
 public class Onboarding {
     private String title, description;
-    private int img;
+    private Drawable img;
 
     public Onboarding(String title, String description, Drawable img) {
         this.title = title;
@@ -34,7 +34,7 @@ public class Onboarding {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(Drawable img) {
         this.img = img;
     }
 }
