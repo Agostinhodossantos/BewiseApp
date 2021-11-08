@@ -56,7 +56,6 @@
         android:layout_height="wrap_content"
         android:text="300"
         android:layout_marginEnd="5dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
         android:layout_gravity="center"
         />
 
