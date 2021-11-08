@@ -22,6 +22,24 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+
+
+    <!--  Top corner cardview  -->
+    <style name="CustomTopCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners_top</item>
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay_card_custom_corners_top" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+    <!--  Close Top corner cardview  -->
+
     <!--  Left corner cardview  -->
     <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_card_custom_corners</item>
@@ -36,8 +54,6 @@
         <item name="cornerSizeBottomRight">0dp</item>
     </style>
     <!--  Close left corner cardview  -->
-
-
 
     <!--  Left corner cardview  -->
     <style name="CustomCardViewStyleBottom" parent="@style/Widget.MaterialComponents.CardView">

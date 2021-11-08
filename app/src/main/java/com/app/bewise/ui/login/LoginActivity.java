@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.app.bewise.R;
-import com.app.bewise.ui.UserProfileActivity;
+import com.app.bewise.ui.main.UserProfileActivity;
 
 public class LoginActivity extends AppCompatActivity {
 

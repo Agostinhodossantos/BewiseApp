@@ -1,4 +1,4 @@
-package com.app.bewise.ui;
+package com.app.bewise.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.Menu;
 
 import com.app.bewise.R;
-import com.app.bewise.ui.UserProfileActivity;
 import com.app.bewise.ui.login.OnboardingActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
