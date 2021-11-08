@@ -36,6 +36,66 @@
                 app:cardCornerRadius="10dp"
                 app:cardElevation="5dp">
 
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            app:riv_corner_radius="8dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/img2"
+                            />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Agostinho Dos Santos"
+                                android:textSize="17sp"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Android developer"
+                                />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                app:cardBackgroundColor="@color/soft_blue"
+                                app:cardCornerRadius="8dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_height="match_parent">
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
 
             </androidx.cardview.widget.CardView>
 
