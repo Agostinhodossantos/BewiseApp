@@ -37,13 +37,12 @@ public class RankingActivity extends AppCompatActivity {
     private void initRanking() {
 
         List<Ranking> rankingList = new ArrayList<>();
-        rankingList.add(new Ranking(1, 3, ""));
-        rankingList.add(new Ranking(1, 3, ""));
-        rankingList.add(new Ranking(1, 3, ""));
-        rankingList.add(new Ranking(1, 3, ""));
-        rankingList.add(new Ranking(1, 3, ""));
-        rankingList.add(new Ranking(1, 3, ""));
-        rankingList.add(new Ranking(1, 3, ""));
+        rankingList.add(new Ranking(10, 3, "Agostinho Dos Santos"));
+        rankingList.add(new Ranking(45, 3, "Ana Maria"));
+        rankingList.add(new Ranking(53, 3, "Helton Junior"));
+        rankingList.add(new Ranking(54, 3, "Jessica Ramires"));
+        rankingList.add(new Ranking(24, 3, "Jorge Dos Santos"));
+        rankingList.add(new Ranking(59, 3, "Katia Marcos"));
 
         RankingAdapter adapter = new RankingAdapter(this, rankingList);
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL);

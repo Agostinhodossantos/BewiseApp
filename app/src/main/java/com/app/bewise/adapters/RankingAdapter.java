@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.app.bewise.R;
 import com.app.bewise.model.Book;
 import com.app.bewise.model.Ranking;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;
 
@@ -37,7 +39,8 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        holder.tv_name.setText(rankingList.get(position).getName());
+        holder.tv_score.setText(rankingList.get(position).getScore());
     }
 
 
@@ -48,9 +51,14 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.MyViewHo
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
+        private TextView tv_name, tv_score;
+        private RoundedImageView img_profile;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            tv_score = itemView.findViewById(R.id.tv_score);
+            tv_name = itemView.findViewById(R.id.tv_name);
+            img_profile = itemView.findViewById(R.id.img_profile);
         }
     }
 }
