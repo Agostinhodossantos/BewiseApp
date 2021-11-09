@@ -27,7 +27,7 @@ public class RankingActivity extends AppCompatActivity {
         initUI();
         initRanking();
 
-        toolbar.setTitle("Top users");
+        toolbar.setTitle("sweetheart");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
@@ -37,6 +37,9 @@ public class RankingActivity extends AppCompatActivity {
     private void initRanking() {
 
         List<Ranking> rankingList = new ArrayList<>();
+        rankingList.add(new Ranking(1, 3, ""));
+        rankingList.add(new Ranking(1, 3, ""));
+        rankingList.add(new Ranking(1, 3, ""));
         rankingList.add(new Ranking(1, 3, ""));
         rankingList.add(new Ranking(1, 3, ""));
         rankingList.add(new Ranking(1, 3, ""));
