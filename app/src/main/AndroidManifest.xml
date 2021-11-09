@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.app.bewise" >
+    package="com.app.bewise">
 
     <dist:module dist:instant="true" />
 
@@ -12,7 +12,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Bewise" >
+        android:theme="@style/Theme.Bewise">
+        <activity android:name=".ui.study.game.ChooseSubjectActivity"></activity>
         <activity
             android:name=".ui.main.RankingActivity"
             android:exported="true" />
@@ -41,7 +42,7 @@
         <activity
             android:name=".ui.main.SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.SplashScreen" >
+            android:theme="@style/Theme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

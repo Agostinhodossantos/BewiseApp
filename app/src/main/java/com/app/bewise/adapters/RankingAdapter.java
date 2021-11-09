@@ -40,7 +40,7 @@ public class RankingAdapter extends RecyclerView.Adapter<RankingAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.tv_name.setText(rankingList.get(position).getName());
-        holder.tv_score.setText(rankingList.get(position).getScore());
+        holder.tv_score.setText(String.valueOf(rankingList.get(position).getScore()));
     }
 
 
