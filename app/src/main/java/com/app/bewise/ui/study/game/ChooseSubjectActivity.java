@@ -38,7 +38,7 @@ public class ChooseSubjectActivity extends AppCompatActivity {
         subjectList.add(new Subject("1", "Quimica", 0));
 
         SubjectAdapter adapter = new SubjectAdapter(this, subjectList);
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL);
+        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
         rv_subjects.setLayoutManager(layoutManager);
         rv_subjects.setAdapter(adapter);
     }
