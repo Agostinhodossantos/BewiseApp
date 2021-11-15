@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bewise">
-        <activity android:name=".ui.study.game.ChooseSubjectActivity"></activity>
+        <activity android:name=".ui.study.game.QuizGameActivity"></activity>
+        <activity android:name=".ui.study.game.ChooseSubjectActivity" />
         <activity
             android:name=".ui.main.RankingActivity"
             android:exported="true" />
