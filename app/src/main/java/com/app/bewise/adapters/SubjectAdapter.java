@@ -15,6 +15,7 @@ import com.app.bewise.R;
 import com.app.bewise.model.BookCategory;
 import com.app.bewise.model.Subject;
 import com.app.bewise.ui.library.BookListActivity;
+import com.app.bewise.ui.study.game.QuizGameActivity;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;
@@ -42,9 +43,13 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
-
-
+        holder.material_card_subject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, QuizGameActivity.class);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
 
@@ -55,15 +60,12 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.MyViewHo
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        private MaterialCardView material_card_category;
-        private TextView tv_title_category;
-        private ImageView img_icon_category;
+        private MaterialCardView material_card_subject;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            material_card_category = itemView.findViewById(R.id.material_card_category);
-            tv_title_category = itemView.findViewById(R.id.tv_title_category);
-            img_icon_category = itemView.findViewById(R.id.img_icon_category);
+            material_card_subject = itemView.findViewById(R.id.card_subject);
         }
     }
 }
