@@ -14,14 +14,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:translationZ="2dp"
             android:layout_gravity="center"
             android:backgroundTint="#F5F7F8"
-            android:background="@drawable/bg_btn_circle"
             >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:backgroundTint="@android:color/white"
+                android:background="@drawable/bg_btn_circle"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:layout_centerInParent="true"
+                />
 
             <ProgressBar
                 android:layout_width="match_parent"
@@ -31,13 +44,87 @@
                 android:progressDrawable="@drawable/circle"
                 />
 
-        </LinearLayout>
+        </RelativeLayout>
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginTop="-40dp"
-            android:layout_height="300dp">
+            android:layout_marginTop="-50dp"
+            app:cardCornerRadius="15dp"
+            android:layout_height="180dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    >
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="50dp"
+                            android:layout_height="16dp"
+                            app:cardCornerRadius="30dp"
+                            app:cardBackgroundColor="@android:color/holo_blue_light"
+                            />
+                        <TextView
+                            android:textColor="@android:color/holo_blue_light"
+                            android:layout_marginStart="6dp"
+                            android:text="4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentEnd="true"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="7"
+                            android:layout_marginEnd="6dp"
+                            android:textColor="@android:color/holo_red_light"
+                            android:layout_height="wrap_content"/>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="50dp"
+                            android:layout_height="16dp"
+                            app:cardCornerRadius="30dp"
+                            app:cardBackgroundColor="@android:color/holo_red_light"
+                            />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="How many students in your class come frow Korea"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
