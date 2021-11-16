@@ -146,5 +146,53 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_question"
+            android:text="Come"
+            android:padding="15dp"
+            android:drawableEnd="@drawable/ic_outline_circle_24"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_outline"
+            android:text="Come"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:drawableEnd="@drawable/ic_baseline_check_circle_24"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_question"
+            android:text="Come"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:drawableEnd="@drawable/ic_outline_circle_24"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_question"
+            android:text="Come"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:drawableEnd="@drawable/ic_outline_circle_24"
+            android:layout_height="wrap_content">
+        </TextView>
+
+    </LinearLayout>
+
 
 </LinearLayout>

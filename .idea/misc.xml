@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/drawable/bg_border.xml" value="0.1125" />
+        <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/drawable/bg_outline.xml" value="0.2046875" />
+        <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/drawable/bg_question.xml" value="0.2046875" />
         <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/drawable/bg_search.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/drawable/ic_baseline_mic_24.xml" value="0.2203125" />
         <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/layout/activity_book_list.xml" value="0.15" />
