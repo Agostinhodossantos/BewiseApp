@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import com.app.bewise.R;
 import com.app.bewise.ui.jobs.JobsActivity;
 import com.app.bewise.ui.main.RankingActivity;
 import com.app.bewise.ui.study.StudyActivity;
+import com.app.bewise.ui.study.swipe.SwipeStudyActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeFragment extends Fragment {
@@ -25,6 +27,7 @@ public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     private CardView card_jobs, card_study, card_publication, card_more;
     private FloatingActionButton floatingActionButton;
+    private ImageButton img_btn_seach;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -71,10 +74,20 @@ public class HomeFragment extends Fragment {
                 // TODO: 11/2/2021 open drawer  
             }
         });
+
+
+        img_btn_seach.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), SwipeStudyActivity.class);
+                startActivity(intent);
+            }
+        });
         return root;
     }
 
     private void initUI(View root) {
+        img_btn_seach = root.findViewById(R.id.img_btn_seach);
         floatingActionButton = root.findViewById(R.id.floatingActionButton);
         card_jobs = root.findViewById(R.id.card_jobs);
         card_more = root.findViewById(R.id.card_more);

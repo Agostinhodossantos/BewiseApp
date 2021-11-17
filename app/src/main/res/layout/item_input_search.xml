@@ -67,6 +67,7 @@
                        android:background="@android:color/transparent"
                        android:paddingStart="15dp"/>
                    <ImageButton
+                       android:id="@+id/img_btn_seach"
                        android:layout_width="60dp"
                        android:layout_height="match_parent"
                        android:src="@drawable/ic_baseline_send_24"
