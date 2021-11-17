@@ -12,14 +12,15 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.bewise.R;
+import com.app.bewise.model.SwipeItem;
 
 import java.util.List;
 
-public class SwipeAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHolder> {
+public class SwipeAdapter extends RecyclerView.Adapter<SwipeAdapter.VideoViewHolder> {
 
-    private List<VideoItem> mVideoItem;
+    private List<SwipeItem> mVideoItem;
 
-    public SwipeAdapter(List<VideoItem> mVideoItem) {
+    public SwipeAdapter(List<SwipeItem> mVideoItem) {
         this.mVideoItem = mVideoItem;
     }
 
@@ -27,7 +28,7 @@ public class SwipeAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
     @Override
     public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new VideoViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_video_container, parent,false));
+                .inflate(R.layout.item_swipe_container, parent,false));
     }
 
     @Override
@@ -53,7 +54,7 @@ public class SwipeAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             txtTitle = itemView.findViewById(R.id.txtTitle);
             progressBar = itemView.findViewById(R.id.progressBar);
         }
-        void setVideoData(VideoItem video) {
+        void setVideoData(SwipeItem video) {
             txtTitle.setText(video.videoTitle);
             txtDesc.setText(video.videoDesc);
             mVideoView.setVideoPath(video.videoUrl);
