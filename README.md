@@ -6,7 +6,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
 
-<img src="https://firebasestorage.googleapis.com/v0/b/apptraining-4e270.appspot.com/o/bewise%2FUntitled.jpg?alt=media&token=e8714286-11f2-4403-b18e-399e11ad90b1" alt="Bewise imagem">
+<img src="https://firebasestorage.googleapis.com/v0/b/apptraining-4e270.appspot.com/o/bewise%2FUntitled%20(1).jpg?alt=media&token=698d55f0-18c0-479d-9e50-bd44d4af6573" alt="Bewise imagem">
 
 > É um aplicativo que pretende dinamizar a educação por gamificar o aprendizagem assim sendo aumentar o engajamento, a eficiência e a motivação  dos alunos para estudar, além do disso o aplicativo apresenta Biblioteca Virtual, Exames Digitais e Área de estudo
 
