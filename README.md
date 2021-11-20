@@ -14,11 +14,11 @@
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
+- [x] Criar Biblioteca Virtual
+- [x] Pagina de autenticação com gmail facebook
+- [x] Pagina de Estudo
+- [ ] Integração do REST API
+- [ ] Teste de integração
 
 ## 💻 Pré-requisitos
 
