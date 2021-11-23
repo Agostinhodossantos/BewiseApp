@@ -39,6 +39,8 @@
         <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
         <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="..\:/Users/Agostinho/AndroidStudioProjects/BewiseApp/app/src/main/res/menu/main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_email_create_acount.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.1703125" />
       </map>
     </option>
   </component>

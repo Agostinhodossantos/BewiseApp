@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "253812211390",
+    "firebase_url": "https://fb-api-2fc74-default-rtdb.firebaseio.com",
+    "project_id": "fb-api-2fc74",
+    "storage_bucket": "fb-api-2fc74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253812211390:android:8c0161daddf34baf8a28ef",
+        "android_client_info": {
+          "package_name": "com.app.bewise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253812211390-24aafmaivdr72uujm51st322qsm0dd6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3WFREJDdQFt-3g3Fubo6E1l1MhCOlCbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253812211390-24aafmaivdr72uujm51st322qsm0dd6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253812211390:android:491462a0c8929dec8a28ef",
+        "android_client_info": {
+          "package_name": "com.example.myappapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253812211390-24aafmaivdr72uujm51st322qsm0dd6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3WFREJDdQFt-3g3Fubo6E1l1MhCOlCbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253812211390-24aafmaivdr72uujm51st322qsm0dd6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253812211390:android:7ecf1819b9bc2d348a28ef",
+        "android_client_info": {
+          "package_name": "dicionary.co.mz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253812211390-24aafmaivdr72uujm51st322qsm0dd6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3WFREJDdQFt-3g3Fubo6E1l1MhCOlCbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "253812211390-24aafmaivdr72uujm51st322qsm0dd6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
