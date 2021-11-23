@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.app.bewise.R;
+import com.app.bewise.model.UserBuilder;
 import com.app.bewise.ui.main.UserProfileActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
         tv_register.setOnClickListener(new View.OnClickListener() {
             @Override
