@@ -4,32 +4,25 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.InputType;
-import android.text.TextWatcher;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.bewise.R;
-import com.app.bewise.model.UserBuilder;
+import com.app.bewise.model.User;
+import com.app.bewise.provider.FirestoreMethods;
 import com.app.bewise.provider.UserProvider;
 import com.app.bewise.ui.main.MainActivity;
 import com.app.bewise.utils.Check;
-import com.app.bewise.utils.Util;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import org.json.JSONObject;
 
 public class EmailCreateAcountActivity extends AppCompatActivity {
 
@@ -38,6 +31,7 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
     String email, password;
+    FirestoreMethods firestoreMethods = new FirestoreMethods();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,24 +59,7 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
             ed_password.requestFocus();
             ed_password.setError("Este campo deve ser preenchido!");
         } else {
-            // set user data in user model
-            UserBuilder userBuilder = new UserBuilder();
-            userBuilder.setEmail(email);
-            userBuilder.setId("12244");
-
-            new UserProvider(this).setUser(userBuilder, new UserProvider
-                    .VolleyResponseListener() {
-                @Override
-                public void onError(String message) {
-                    Toast.makeText(EmailCreateAcountActivity.this, message, Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onResponse(Object response) {
-                    Toast.makeText(EmailCreateAcountActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
-                }
-            });
-            //authUser(email, password);
+            authUser(email, password);
         }
     }
 
@@ -119,30 +96,28 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser user) {
-        Log.d("user", user.toString());
         Toast.makeText(EmailCreateAcountActivity.this, ""+user, Toast.LENGTH_SHORT).show();
-        if (user != null ) {
+        if (user == null ) {
             progressControl(tv_register, progressBar);
         } else {
-            sendEmailVerification();
-            // set user data in user model
-            UserBuilder userBuilder = new UserBuilder();
-            userBuilder.setEmail(email);
-            userBuilder.setId("12244");
+          User userModel = new User();
+          userModel.id = user.getUid();
+          userModel.email = email;
 
-            new UserProvider(this).setUser(userBuilder, new UserProvider.VolleyResponseListener() {
-                @Override
-                public void onError(String message) {
+          firestoreMethods.createUser(userModel, new FirestoreMethods.ResponseListener() {
+              @Override
+              public void onSuccess(Object response) {
+                  Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                  startActivity(intent);
+                  finish();
+              }
 
-                }
+              @Override
+              public void onFailure(String message) {
+                  Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+              }
+          });
 
-                @Override
-                public void onResponse(Object response) {
-
-                }
-            });
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
         }
     }
 

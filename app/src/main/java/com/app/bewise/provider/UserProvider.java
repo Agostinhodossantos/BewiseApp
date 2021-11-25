@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.airbnb.lottie.utils.Utils;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -12,7 +11,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.app.bewise.model.UserBuilder;
+import com.app.bewise.model.User;
 import com.app.bewise.utils.Util;
 import com.google.gson.Gson;
 
@@ -22,8 +21,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-import java.util.UUID;
 
 public class UserProvider  {
     String url = Util.BASE_API+"/users";
@@ -40,26 +37,26 @@ public class UserProvider  {
     }
 
 
-    public List<UserBuilder> getUsers() {
-        List<UserBuilder> usersList = new ArrayList<>();
+    public List<User> getUsers() {
+        List<User> usersList = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(context);
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
-                UserBuilder userBuilder = new UserBuilder();
+                User userBuilder = new User();
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         // we are getting each json object.
                         JSONObject responseObj = response.getJSONObject(i);
-                        userBuilder.setId(responseObj.getString("id"));
-                        userBuilder.setEmail(responseObj.getString("email"));
-                        userBuilder.setName(responseObj.getString("name"));
-                        userBuilder.setPhone(responseObj.getString("phone"));
-                        userBuilder.setLocation(responseObj.getString("location"));
-                        userBuilder.setSchool_levels(responseObj.getString("school_levels"));
-                        userBuilder.setCreatedAt(responseObj.getString("createdAt"));
-                        userBuilder.setStatus(responseObj.getString("status"));
-                        userBuilder.setOthers(responseObj.getString("others"));
+//                        userBuilder.id(responseObj.getString("id"));
+//                        userBuilder.Email(responseObj.getString("email"));
+//                        userBuilder.Name(responseObj.getString("name"));
+//                        userBuilder.Phone(responseObj.getString("phone"));
+//                        userBuilder.Location(responseObj.getString("location"));
+//                        userBuilder.School_levels(responseObj.getString("school_levels"));
+//                        userBuilder.CreatedAt(responseObj.getString("createdAt"));
+//                        userBuilder.Status(responseObj.getString("status"));
+//                        userBuilder.Others(responseObj.getString("others"));
                         usersList.add(userBuilder);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -77,7 +74,7 @@ public class UserProvider  {
         return usersList;
     }
 
-    public void setUser(UserBuilder user, VolleyResponseListener volleyResponseListener) {
+    public void setUser(User user, VolleyResponseListener volleyResponseListener) {
         RequestQueue requestQueue = Volley.newRequestQueue(context);
         JSONObject postData = new JSONObject();
         Gson gson = new Gson();
