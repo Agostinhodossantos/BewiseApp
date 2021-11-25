@@ -1,5 +1,7 @@
 package com.app.bewise.model;
 
+import org.json.JSONObject;
+
 public class UserBuilder {
     private String id;
     private String email;
@@ -59,4 +61,20 @@ public class UserBuilder {
     public User createUser() {
         return new User(id, email, name, phone, location, school_levels, createdAt, status, others);
     }
+
+    @Override
+    public String toString() {
+        return "UserBuilder{" +
+                "id='" + id + '\'' +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", location='" + location + '\'' +
+                ", school_levels='" + school_levels + '\'' +
+                ", createdAt='" + createdAt + '\'' +
+                ", status='" + status + '\'' +
+                ", others='" + others + '\'' +
+                '}';
+    }
+
 }
