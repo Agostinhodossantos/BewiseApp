@@ -59,4 +59,8 @@ class UserProvider {
         queue.add(jsonArrayRequest);
         return usersList;
     }
+
+    private void setUser(UserBuilder user) {
+
+    }
 }
