@@ -27,7 +27,7 @@ public class RankingActivity extends AppCompatActivity {
         initUI();
         initRanking();
 
-        toolbar.setTitle("sweetheart");
+        toolbar.setTitle("Ranking");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

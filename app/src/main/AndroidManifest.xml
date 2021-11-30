@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.app.bewise">
 
@@ -22,11 +23,13 @@
         <activity android:name=".ui.study.game.ChooseSubjectActivity" />
         <activity
             android:name=".ui.main.RankingActivity"
+            android:parentActivityName=".ui.main.MainActivity"
             android:exported="true" />
         <activity android:name=".ui.login.EmailCreateAcountActivity" />
         <activity android:name=".ui.login.RegisterActivity" />
         <activity android:name=".ui.login.OnboardingActivity" />
-        <activity android:name=".ui.login.LoginActivity" />
+        <activity android:name=".ui.login.LoginActivity"
+            android:parentActivityName=".ui.login.OnboardingActivity"/>
         <activity android:name=".ui.main.MainActivity" />
         <activity android:name=".ui.jobs.JobOverViewActivity" />
         <activity android:name=".ui.main.SuportActivity" />

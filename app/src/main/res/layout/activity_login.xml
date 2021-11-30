@@ -71,6 +71,7 @@
                     android:layout_marginStart="4dp"
                     />
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="voce@exemplo.com"
@@ -85,6 +86,7 @@
                     android:layout_marginStart="4dp"
                     />
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="*********"
@@ -92,6 +94,14 @@
                     />
 
 
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    tools:visibility="visible"
+                    android:visibility="gone"/>
                 <TextView
                     android:id="@+id/tv_register"
                     android:layout_width="match_parent"
