@@ -20,7 +20,7 @@ public class CheckUnitTest {
 
     @Test
     public void password_validation_isCorrent() {
-        assertEquals(true, Check.isValidPassword("myPassword0"));
+        assertEquals(true, Check.isValidPassword("Dossantos00"));
         assertEquals(false, Check.isValidPassword("1234"));
     }
 

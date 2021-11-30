@@ -61,7 +61,7 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
         } else if (Check.isEmpty(password)) {
             ed_password.requestFocus();
             ed_password.setError("Este campo deve ser preenchido!");
-        } else if (Check.isValidPassword(password)) {
+        } else if (!Check.isValidPassword(password)) {
             ed_password.requestFocus();
             ed_password.setError("Password invalido deve ter 6 letras no minimo!");
         } else {
