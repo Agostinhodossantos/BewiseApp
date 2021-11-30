@@ -91,6 +91,7 @@
                     android:layout_height="wrap_content"
                     android:hint="*********"
                     android:textSize="13sp"
+                    android:inputType="textPassword"
                     />
 
 

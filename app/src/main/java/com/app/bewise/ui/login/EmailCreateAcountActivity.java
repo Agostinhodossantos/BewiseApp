@@ -18,6 +18,8 @@ import com.app.bewise.provider.UserProvider;
 import com.app.bewise.ui.main.MainActivity;
 import com.app.bewise.utils.Check;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
@@ -70,21 +72,22 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
     }
 
     private void authUser(String email, String password) {
-        progressControl(progressBar, tv_register);
+
+        progressControl(progressBar, tv_register); // show progress
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Log.d("user", user.toString());
-                            updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            updateUI(null);
-                        }
-                    }
-                });
+        .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                updateUI(authResult.getUser());
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getApplicationContext(), ""+e.getMessage(), Toast.LENGTH_LONG).show();
+                progressControl(tv_register, progressBar);
+            }
+        });
+
     }
 
     private void sendEmailVerification() {
@@ -102,10 +105,7 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser user) {
-        Toast.makeText(EmailCreateAcountActivity.this, ""+user, Toast.LENGTH_SHORT).show();
-        if (user == null ) {
-            progressControl(tv_register, progressBar);
-        } else {
+
           User userModel = new User();
           userModel.id = user.getUid();
           userModel.email = email;
@@ -124,7 +124,6 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
               }
           });
 
-        }
     }
 
     private void progressControl(View show, View hidden) {
