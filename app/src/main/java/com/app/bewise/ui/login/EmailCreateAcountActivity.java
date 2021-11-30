@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.app.bewise.R;
 import com.app.bewise.model.User;
+import com.app.bewise.provider.AuthUser;
 import com.app.bewise.provider.FirestoreMethods;
 import com.app.bewise.provider.UserProvider;
 import com.app.bewise.ui.main.MainActivity;
@@ -30,7 +31,6 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
 
     private TextInputEditText ed_email, ed_password;
     private TextView tv_register;
-    private FirebaseAuth mAuth;
     private ProgressBar progressBar;
     String email, password;
     FirestoreMethods firestoreMethods = new FirestoreMethods();
@@ -40,7 +40,6 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_email_create_acount);
         initUI();
-        mAuth = FirebaseAuth.getInstance();
 
         tv_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +73,7 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
     private void authUser(String email, String password) {
 
         progressControl(progressBar, tv_register); // show progress
-        mAuth.createUserWithEmailAndPassword(email, password)
+        AuthUser.mAuth.createUserWithEmailAndPassword(email, password)
         .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
             @Override
             public void onSuccess(AuthResult authResult) {
@@ -121,6 +120,7 @@ public class EmailCreateAcountActivity extends AppCompatActivity {
               @Override
               public void onFailure(String message) {
                   Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                  progressControl(tv_register, progressBar);
               }
           });
 

@@ -46,7 +46,11 @@
         <entry key="app/src/main/res/layout/activity_email_create_acount.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_library.xml" value="0.12409420289855072" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1703125" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/home_menu_layout.xml" value="0.1" />
       </map>
     </option>
   </component>

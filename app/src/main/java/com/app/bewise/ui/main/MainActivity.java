@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.app.bewise.R;
+import com.app.bewise.provider.AuthUser;
 import com.app.bewise.ui.login.OnboardingActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -67,8 +69,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case  R.id.action_img:
-                Intent intent = new Intent(MainActivity.this, OnboardingActivity.class);
-                startActivity(intent);
+
+                if (AuthUser.isAuth()) {
+                    Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
+                    startActivity(intent);
+                } else {
+                    Intent intent = new Intent(MainActivity.this, OnboardingActivity.class);
+                    startActivity(intent);
+                }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

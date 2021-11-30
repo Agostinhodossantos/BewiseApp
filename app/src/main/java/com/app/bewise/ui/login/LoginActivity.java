@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.app.bewise.R;
+import com.app.bewise.provider.AuthUser;
 import com.app.bewise.provider.FirestoreMethods;
 import com.app.bewise.ui.main.MainActivity;
 import com.app.bewise.ui.main.UserProfileActivity;
@@ -29,10 +30,8 @@ public class LoginActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TextView tv_register;
     private TextInputEditText ed_email, ed_password;
-    private FirebaseAuth mAuth;
     private ProgressBar progressBar;
     String email, password;
-    FirestoreMethods firestoreMethods = new FirestoreMethods();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         initUI();
-
-        mAuth = FirebaseAuth.getInstance();
 
         tv_register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,14 +69,13 @@ public class LoginActivity extends AppCompatActivity {
     private void authUser(String email, String password) {
         progressControl(progressBar, tv_register);
 
-        mAuth.signInWithEmailAndPassword(email, password)
+        AuthUser.mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d("USER", "signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            FirebaseUser user = AuthUser.mAuth.getCurrentUser();
                             updateUI(user);
                         } else {
                             Toast.makeText(LoginActivity.this, "Authentication failed.",
