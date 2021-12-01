@@ -4,10 +4,16 @@ import androidx.annotation.NonNull;
 
 import com.app.bewise.model.Book;
 import com.app.bewise.model.User;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FirestoreMethods {
 
@@ -46,7 +52,6 @@ public class FirestoreMethods {
     }
 
     // BOOK CRUD
-
     public void createBook(Book book, ResponseListener listener) {
         db.collection("books")
                 .document(book.getId())
@@ -56,6 +61,37 @@ public class FirestoreMethods {
                 })
                 .addOnFailureListener(e -> {
                     listener.onFailure(e.getMessage());
+                });
+    }
+
+    public void getBook(String id, ResponseListener listener) {
+        db.collection("books")
+                .document(id)
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+                    Book book = documentSnapshot.toObject(Book.class);
+                    listener.onSuccess(book);
+                })
+                .addOnFailureListener(e -> {
+                    listener.onFailure(e.getMessage());
+                });
+    }
+
+    public void getAllBooks(ResponseListener listener) {
+        db.collection("books")
+                .get()
+                .addOnCompleteListener(task -> {
+                   if (task.isSuccessful()) {
+                       List<Book> bookList = new ArrayList<>();
+                       for (DocumentSnapshot document : task.getResult()) {
+                           Book book = document.toObject(Book.class);
+                           bookList.add(book);
+                       }
+                       listener.onSuccess(bookList);
+
+                   } else {
+                       listener.onFailure("An error has occurred");
+                   }
                 });
     }
 
