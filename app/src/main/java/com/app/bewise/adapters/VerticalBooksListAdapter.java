@@ -10,17 +10,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.bewise.R;
 import com.app.bewise.model.Book;
+import com.app.bewise.model.Job;
 
 import java.util.List;
 
 public class VerticalBooksListAdapter extends RecyclerView.Adapter<VerticalBooksListAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Book> bookList;
+    private List<Job> jobListList;
 
-    public VerticalBooksListAdapter(Context mContext, List<Book> bookList) {
+    public VerticalBooksListAdapter(Context mContext, List<Job> jobList) {
         this.mContext = mContext;
-        this.bookList = bookList;
+        this.jobListList = jobList;
     }
 
     @NonNull
@@ -42,7 +43,7 @@ public class VerticalBooksListAdapter extends RecyclerView.Adapter<VerticalBooks
 
     @Override
     public int getItemCount() {
-        return bookList.size();
+        return jobListList.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

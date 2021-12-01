@@ -1,14 +1,15 @@
 package com.app.bewise.model;
 
 public class Book {
-    private String id, title,category ,author, img, url;
+    private String id, title, description, category, author, img, url;
 
     public Book() {
     }
 
-    public Book(String id, String title, String category, String author, String img, String url) {
+    public Book(String id, String title, String description, String category, String author, String img, String url) {
         this.id = id;
         this.title = title;
+        this.description = description;
         this.category = category;
         this.author = author;
         this.img = img;
@@ -29,6 +30,14 @@ public class Book {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getCategory() {
