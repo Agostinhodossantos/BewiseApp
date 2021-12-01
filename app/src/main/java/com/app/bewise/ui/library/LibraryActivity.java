@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.app.bewise.R;
@@ -15,14 +17,17 @@ import com.app.bewise.adapters.VerticalBooksListAdapter;
 import com.app.bewise.model.Book;
 import com.app.bewise.model.BookCategory;
 import com.app.bewise.provider.FirestoreMethods;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class LibraryActivity extends AppCompatActivity {
 
-    RecyclerView rv_books, rv_books_category, rv_my_books;
-    FirestoreMethods firestoreMethods = new FirestoreMethods();
+    private RecyclerView rv_books, rv_books_category, rv_my_books;
+    private FirestoreMethods firestoreMethods = new FirestoreMethods();
+    private ShimmerFrameLayout shimmer_layout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +44,10 @@ public class LibraryActivity extends AppCompatActivity {
         firestoreMethods.getAllBooks(new FirestoreMethods.ResponseListener() {
             @Override
             public void onSuccess(Object response) {
+                // hide shimer
+                shimmer_layout.stopShimmer();
+                shimmer_layout.setVisibility(View.GONE);
+
                 BooksListAdapter adapter = new BooksListAdapter(LibraryActivity.this, (List<Book>) response);
                 StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL);
                 rv_books.setLayoutManager(layoutManager);
@@ -90,6 +99,7 @@ public class LibraryActivity extends AppCompatActivity {
         rv_books = findViewById(R.id.rv_books);
         rv_books_category = findViewById(R.id.rv_books_category);
         rv_my_books = findViewById(R.id.rv_books_vertical);
+        shimmer_layout = findViewById(R.id.shimmer_layout);
     }
 
 
