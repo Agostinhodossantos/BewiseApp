@@ -11,7 +11,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.bewise.R;
 import com.app.bewise.model.Book;
+import com.app.bewise.utils.Check;
+import com.app.bewise.utils.StrFormat;
 import com.makeramen.roundedimageview.RoundedImageView;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -38,7 +41,14 @@ public class VerticalBooksListAdapter extends RecyclerView.Adapter<VerticalBooks
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
+        holder.tv_title.setText(StrFormat.toUpperFirst(bookList.get(position).getTitle()));
+        holder.tv_author.setText(StrFormat.toUpperFirst(bookList.get(position).getAuthor()));
+        
+        if (!Check.isEmpty(bookList.get(position).getImg())) {
+            Picasso.get().load(bookList.get(position).getImg()).into(holder.img_cover);
+        } else {
+            // TODO: 12/1/21 show default thumbnail 
+        }
     }
 
 

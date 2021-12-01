@@ -14,6 +14,7 @@ import com.app.bewise.adapters.BooksListAdapter;
 import com.app.bewise.adapters.VerticalBooksListAdapter;
 import com.app.bewise.model.Book;
 import com.app.bewise.model.BookCategory;
+import com.app.bewise.provider.FirestoreMethods;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,7 @@ import java.util.List;
 public class LibraryActivity extends AppCompatActivity {
 
     RecyclerView rv_books, rv_books_category, rv_my_books;
+    FirestoreMethods firestoreMethods = new FirestoreMethods();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,16 +35,22 @@ public class LibraryActivity extends AppCompatActivity {
     }
 
     private void getBooks() {
-        List<Book> bookList = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            Book book = new Book("", "", "", "","", "", "");
-            bookList.add(book);
-        }
 
-        BooksListAdapter adapter = new BooksListAdapter(this, bookList);
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL);
-        rv_books.setLayoutManager(layoutManager);
-        rv_books.setAdapter(adapter);
+        firestoreMethods.getAllBooks(new FirestoreMethods.ResponseListener() {
+            @Override
+            public void onSuccess(Object response) {
+                BooksListAdapter adapter = new BooksListAdapter(LibraryActivity.this, (List<Book>) response);
+                StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL);
+                rv_books.setLayoutManager(layoutManager);
+                rv_books.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure(String message) {
+
+            }
+        });
+
     }
 
     private void getCategory() {
