@@ -44,6 +44,7 @@
         <entry key="app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.19635416666666666" />
         <entry key="app/src/main/res/drawable/splash_bg.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/activity_book_list.xml" value="0.17552083333333332" />
+        <entry key="app/src/main/res/layout/activity_choose_subject.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/activity_email_create_acount.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_library.xml" value="0.12409420289855072" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18177083333333333" />
@@ -54,6 +55,7 @@
         <entry key="app/src/main/res/layout/home_menu_layout.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_book_horizontal.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/item_book_vertical.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/item_category.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/item_shimer_book.xml" value="0.1" />
       </map>
     </option>

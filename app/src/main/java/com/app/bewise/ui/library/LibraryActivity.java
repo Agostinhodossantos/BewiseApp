@@ -17,6 +17,7 @@ import com.app.bewise.adapters.VerticalBooksListAdapter;
 import com.app.bewise.model.Book;
 import com.app.bewise.model.BookCategory;
 import com.app.bewise.provider.FirestoreMethods;
+import com.app.bewise.utils.Util;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class LibraryActivity extends AppCompatActivity {
 
         initUI();
         getBooks();
-        getCategory();
+        initCategory();
         getMyBook();
     }
 
@@ -62,20 +63,8 @@ public class LibraryActivity extends AppCompatActivity {
 
     }
 
-    private void getCategory() {
-        List<BookCategory> categoryList = new ArrayList<>();
-
-        categoryList.add(new BookCategory(2,1,"Matematica", 1));
-        categoryList.add(new BookCategory(2,1, "Quimica", 1));
-        categoryList.add(new BookCategory(2,1,"Geografia", 1));
-        categoryList.add(new BookCategory(2,1,"Fisica", 1));
-        categoryList.add(new BookCategory(2,1,"Ingles", 1));
-        categoryList.add(new BookCategory(2,1,"DGD", 1));
-        categoryList.add(new BookCategory(2,1, "Filosofia", 1));
-
-
-        Toast.makeText(LibraryActivity.this, ""+categoryList.size(), Toast.LENGTH_SHORT).show();
-        BooksCategoryAdapter adapter = new BooksCategoryAdapter(this, categoryList);
+    private void initCategory() {
+        BooksCategoryAdapter adapter = new BooksCategoryAdapter(this,Util.getCategory());
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL);
         rv_books_category.setLayoutManager(layoutManager);
         rv_books_category.setAdapter(adapter);

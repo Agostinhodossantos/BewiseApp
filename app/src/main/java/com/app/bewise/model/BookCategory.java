@@ -1,6 +1,9 @@
 package com.app.bewise.model;
 
-public class BookCategory extends Category {
+import java.io.Serializable;
+
+public class BookCategory extends Category implements Serializable {
+    private int id;
     private String title;
     private int img;
 

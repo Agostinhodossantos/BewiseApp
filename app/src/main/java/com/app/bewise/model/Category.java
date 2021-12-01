@@ -1,6 +1,8 @@
 package com.app.bewise.model;
 
-public class Category {
+import java.io.Serializable;
+
+public class Category implements Serializable {
     private int grade, idCategory;
 
     public Category(int grade, int idCategory) {

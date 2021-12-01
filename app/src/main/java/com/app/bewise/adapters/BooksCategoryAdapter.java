@@ -46,11 +46,13 @@ public class BooksCategoryAdapter extends RecyclerView.Adapter<BooksCategoryAdap
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         holder.tv_title_category.setText(categoryList.get(position).getTitle());
+        holder.img_icon_category.setImageResource(categoryList.get(position).getImg());
 
         holder.material_card_category.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, BookListActivity.class);
+                intent.putExtra("category", categoryList.get(position));
                 mContext.startActivity(intent);
             }
         });

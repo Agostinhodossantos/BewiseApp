@@ -32,10 +32,10 @@ public class ChooseSubjectActivity extends AppCompatActivity {
     private void initSubject() {
 
         List<Subject> subjectList = new ArrayList<>();
-        subjectList.add(new Subject("1", "Quimica", 0));
-        subjectList.add(new Subject("1", "Quimica", 0));
-        subjectList.add(new Subject("1", "Quimica", 0));
-        subjectList.add(new Subject("1", "Quimica", 0));
+        subjectList.add(new Subject(1,2, "Quimica", 0));
+        subjectList.add(new Subject(1,2, "Quimica", 0));
+        subjectList.add(new Subject(1,2, "Quimica", 0));
+        subjectList.add(new Subject(1,2, "Quimica", 0));
 
         SubjectAdapter adapter = new SubjectAdapter(this, subjectList);
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);
