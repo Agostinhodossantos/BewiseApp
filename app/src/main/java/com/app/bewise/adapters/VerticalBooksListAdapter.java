@@ -4,24 +4,25 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.bewise.R;
 import com.app.bewise.model.Book;
-import com.app.bewise.model.Job;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;
 
 public class VerticalBooksListAdapter extends RecyclerView.Adapter<VerticalBooksListAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Job> jobListList;
+    private List<Book> bookList;
 
-    public VerticalBooksListAdapter(Context mContext, List<Job> jobList) {
+    public VerticalBooksListAdapter(Context mContext, List<Book> bookList) {
         this.mContext = mContext;
-        this.jobListList = jobList;
+        this.bookList = bookList;
     }
 
     @NonNull
@@ -43,14 +44,20 @@ public class VerticalBooksListAdapter extends RecyclerView.Adapter<VerticalBooks
 
     @Override
     public int getItemCount() {
-        return jobListList.size();
+        return bookList.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
+        private RoundedImageView img_cover;
+        private TextView tv_author, tv_title;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            img_cover = itemView.findViewById(R.id.img_cover);
+            tv_author = itemView.findViewById(R.id.tv_author);
+            tv_title = itemView.findViewById(R.id.tv_title);
         }
     }
 }

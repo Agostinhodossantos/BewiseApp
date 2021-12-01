@@ -35,7 +35,7 @@ public class LibraryActivity extends AppCompatActivity {
     private void getBooks() {
         List<Book> bookList = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            Book book = new Book("", "", "", "", "");
+            Book book = new Book("", "", "", "","", "", "");
             bookList.add(book);
         }
 
@@ -68,7 +68,7 @@ public class LibraryActivity extends AppCompatActivity {
     private void getMyBook() {
         List<Book> bookList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            Book book = new Book("", "", "", "", "");
+            Book book = new Book("", "","","", "", "", "");
             bookList.add(book);
         }
 
