@@ -1,24 +1,13 @@
 package com.app.bewise.model;
 
-public class BookCategory {
-    private String id, title;
+public class BookCategory extends Category {
+    private String title;
     private int img;
 
-    public BookCategory(String id, String title, int img) {
-        this.id = id;
+    public BookCategory(int grade, int idCategory, String title, int img) {
+        super(grade, idCategory);
         this.title = title;
         this.img = img;
-    }
-
-    public BookCategory() {
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getTitle() {

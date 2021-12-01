@@ -65,14 +65,13 @@ public class LibraryActivity extends AppCompatActivity {
     private void getCategory() {
         List<BookCategory> categoryList = new ArrayList<>();
 
-
-        categoryList.add(new BookCategory("1", "Matematica", 1));
-        categoryList.add(new BookCategory("1", "Quimica", 1));
-        categoryList.add(new BookCategory("1", "Geografia", 1));
-        categoryList.add(new BookCategory("1", "Fisica", 1));
-        categoryList.add(new BookCategory("1", "Ingles", 1));
-        categoryList.add(new BookCategory("1", "DGD", 1));
-        categoryList.add(new BookCategory("1", "Filosofia", 1));
+        categoryList.add(new BookCategory(2,1,"Matematica", 1));
+        categoryList.add(new BookCategory(2,1, "Quimica", 1));
+        categoryList.add(new BookCategory(2,1,"Geografia", 1));
+        categoryList.add(new BookCategory(2,1,"Fisica", 1));
+        categoryList.add(new BookCategory(2,1,"Ingles", 1));
+        categoryList.add(new BookCategory(2,1,"DGD", 1));
+        categoryList.add(new BookCategory(2,1, "Filosofia", 1));
 
 
         Toast.makeText(LibraryActivity.this, ""+categoryList.size(), Toast.LENGTH_SHORT).show();
