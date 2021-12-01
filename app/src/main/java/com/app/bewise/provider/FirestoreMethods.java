@@ -2,6 +2,7 @@ package com.app.bewise.provider;
 
 import androidx.annotation.NonNull;
 
+import com.app.bewise.model.Book;
 import com.app.bewise.model.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -16,6 +17,7 @@ public class FirestoreMethods {
     }
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    // USER CRUD
     public void createUser(User user, ResponseListener responseListener) {
         db.collection("users")
                 .document(user.id)
@@ -29,12 +31,12 @@ public class FirestoreMethods {
     }
 
     public void getUser(String id, ResponseListener responseListener) {
-        db.collection("users").document(id).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                User user = documentSnapshot.toObject(User.class);
-                responseListener.onSuccess(user);
-            }
+        db.collection("users")
+                .document(id)
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+            User user = documentSnapshot.toObject(User.class);
+            responseListener.onSuccess(user);
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
@@ -42,5 +44,21 @@ public class FirestoreMethods {
             }
         });
     }
+
+    // BOOK CRUD
+
+    public void createBook(Book book, ResponseListener listener) {
+        db.collection("books")
+                .document(book.getId())
+                .set(book)
+                .addOnSuccessListener(unused -> {
+                    listener.onSuccess(book);
+                })
+                .addOnFailureListener(e -> {
+                    listener.onFailure(e.getMessage());
+                });
+    }
+
+
     
 }
