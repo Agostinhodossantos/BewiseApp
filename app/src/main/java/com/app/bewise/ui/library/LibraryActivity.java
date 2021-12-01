@@ -71,16 +71,28 @@ public class LibraryActivity extends AppCompatActivity {
     }
 
     private void getMyBook() {
-        List<Book> bookList = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
-            Book book = new Book("", "","","", "", "", "");
-            bookList.add(book);
-        }
+        firestoreMethods.getAllBooks(new FirestoreMethods.ResponseListener() {
+            @Override
+            public void onSuccess(Object response) {
+                List<Book> bookList = new ArrayList<>((List<Book>) response);
+                if (bookList.size() > 5) { // split list if > 5
+                    bookList = bookList.subList(0, 5);
+                }
 
-        VerticalBooksListAdapter adapter = new VerticalBooksListAdapter(this, bookList);
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.VERTICAL);
-        rv_my_books.setLayoutManager(layoutManager);
-        rv_my_books.setAdapter(adapter);
+                VerticalBooksListAdapter adapter = new VerticalBooksListAdapter(
+                        LibraryActivity.this, bookList);
+                StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1,
+                        LinearLayoutManager.VERTICAL);
+                rv_my_books.setLayoutManager(layoutManager);
+                rv_my_books.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure(String message) {
+
+            }
+        });
+
     }
 
     private void initUI() {

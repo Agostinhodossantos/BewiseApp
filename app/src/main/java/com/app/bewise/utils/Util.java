@@ -16,7 +16,7 @@ public class Util {
         List<BookCategory> categoryList = new ArrayList<>();
 
         categoryList.add(new BookCategory(0,1,"Matematica", R.drawable.rocket_3));
-        categoryList.add(new BookCategory(0,1, "Quimica", R.drawable.rocket));
+        categoryList.add(new BookCategory(0,1, "Quimica", R.drawable.rocket_3));
         categoryList.add(new BookCategory(0,1,"Geografia", R.drawable.rocket_3));
         categoryList.add(new BookCategory(0,1,"Fisica", R.drawable.rocket_3));
         categoryList.add(new BookCategory(0,1,"Ingles", R.drawable.rocket_3));
