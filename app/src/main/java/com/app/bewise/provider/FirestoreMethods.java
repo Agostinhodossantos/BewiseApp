@@ -77,6 +77,32 @@ public class FirestoreMethods {
                 });
     }
 
+    public void getBookByCategory(String category, ResponseListener listener) {
+        db.collection("books")
+                .whereEqualTo("category", category)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            List<Book> bookList = new ArrayList<>();
+                            for (DocumentSnapshot document : task.getResult()) {
+                                Book book = document.toObject(Book.class);
+                                bookList.add(book);
+                            }
+                            listener.onSuccess(bookList);
+                        } else {
+                            listener.onFailure("An error has occurred");
+                        }
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.onFailure("An error has occurred "+e.getMessage());
+            }
+        });
+    }
+
     public void getAllBooks(ResponseListener listener) {
         db.collection("books")
                 .get()

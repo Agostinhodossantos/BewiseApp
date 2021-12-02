@@ -51,10 +51,11 @@ public class BookListActivity extends AppCompatActivity {
     }
 
     private void updateUI(BookCategory category) {
+
+        Toast.makeText(BookListActivity.this, ""+category.toString(), Toast.LENGTH_SHORT).show();
         toolbar.setTitle(category.getTitle());
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         getBooksByCategory();
     }
 
