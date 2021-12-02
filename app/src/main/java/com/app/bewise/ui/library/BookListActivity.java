@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.app.bewise.R;
 import com.app.bewise.adapters.VerticalBooksListAdapter;
 import com.app.bewise.model.Book;
+import com.app.bewise.model.BookCategory;
 import com.app.bewise.provider.FirestoreMethods;
 
 import java.util.ArrayList;
@@ -31,18 +32,30 @@ public class BookListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_book_list);
 
         initUI();
-
-        toolbar.setTitle("Matematica");
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        getBooksByCategory();
+        getIntentValues();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.library_menu, menu);
         return true;
+    }
+
+    private void getIntentValues() {
+        Bundle bundle = getIntent().getExtras();
+        BookCategory category = (BookCategory) bundle.getSerializable("category");
+
+        if (category != null) {
+            updateUI(category);
+        }
+    }
+
+    private void updateUI(BookCategory category) {
+        toolbar.setTitle(category.getTitle());
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        getBooksByCategory();
     }
 
     private void getBooksByCategory() {
