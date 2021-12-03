@@ -1,19 +1,20 @@
 package com.app.bewise.model;
 
 public class Book {
-    private String id, title, description, category, author, img, url;
+    private String id, title, description, author, img, url;
+    private Category category;
 
     public Book() {
     }
 
-    public Book(String id, String title, String description, String category, String author, String img, String url) {
+    public Book(String id, String title, String description, String author, String img, String url, Category category) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.category = category;
         this.author = author;
         this.img = img;
         this.url = url;
+        this.category = category;
     }
 
     public String getId() {
@@ -40,14 +41,6 @@ public class Book {
         this.description = description;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public String getAuthor() {
         return author;
     }
@@ -70,5 +63,13 @@ public class Book {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

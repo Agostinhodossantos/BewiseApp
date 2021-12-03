@@ -20,5 +20,17 @@ public class FirestoreMethodsTest extends TestCase {
     }
 
     public void testGetAllBooks() {
+        FirestoreMethods methods = new FirestoreMethods();
+        methods.getAllBooks(new FirestoreMethods.ResponseListener() {
+            @Override
+            public void onSuccess(Object response) {
+
+            }
+
+            @Override
+            public void onFailure(String message) {
+
+            }
+        });
     }
 }

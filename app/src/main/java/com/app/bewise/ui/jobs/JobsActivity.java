@@ -13,6 +13,7 @@ import com.app.bewise.adapters.JobsListAdapter;
 import com.app.bewise.adapters.VerticalBooksListAdapter;
 import com.app.bewise.adapters.VerticalJobsListAdapter;
 import com.app.bewise.model.Book;
+import com.app.bewise.model.Category;
 import com.app.bewise.model.Job;
 
 import java.util.ArrayList;
@@ -53,13 +54,16 @@ public class JobsActivity extends AppCompatActivity {
 
 
     private void getJobs() {
-        List<Book> bookList = new ArrayList<>();
+
+        List<Job> jobList = new ArrayList<>();
+
         for (int i = 0; i < 10; i++) {
-            Book book = new Book("", "", "", "", "","", "");
-            bookList.add(book);
+            Category category = new Category(1,2);
+            Job job = new Job("", "", "", "", "", category);
+            jobList.add(job);
         }
 
-        JobsListAdapter adapter = new JobsListAdapter(this, bookList);
+        JobsListAdapter adapter = new JobsListAdapter(this, jobList);
         StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(1, LinearLayoutManager.HORIZONTAL);
         rv_jobs.setLayoutManager(layoutManager);
         rv_jobs.setAdapter(adapter);

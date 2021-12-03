@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.bewise.R;
 import com.app.bewise.model.Book;
+import com.app.bewise.model.Job;
 import com.app.bewise.ui.jobs.JobOverViewActivity;
 import com.makeramen.roundedimageview.RoundedImageView;
 
@@ -20,11 +21,11 @@ import java.util.List;
 public class JobsListAdapter extends RecyclerView.Adapter<JobsListAdapter.MyViewHolder> {
 
     private Context mContext;
-    private List<Book> bookList;
+    private List<Job> jobList;
 
-    public JobsListAdapter(Context mContext, List<Book> bookList) {
+    public JobsListAdapter(Context mContext, List<Job> jobList) {
         this.mContext = mContext;
-        this.bookList = bookList;
+        this.jobList = jobList;
     }
 
     @NonNull
@@ -59,7 +60,7 @@ public class JobsListAdapter extends RecyclerView.Adapter<JobsListAdapter.MyView
 
     @Override
     public int getItemCount() {
-        return bookList.size();
+        return jobList.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

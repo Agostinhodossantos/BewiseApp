@@ -1,15 +1,16 @@
 package com.app.bewise.model;
 
 public class Job {
-    private String id, title, category, description, thumbnail, url;
+    private String id, title, description, thumbnail, url;
+    private Category category;
 
-    public Job(String id, String title, String category, String description, String thumbnail, String url) {
+    public Job(String id, String title, String description, String thumbnail, String url, Category category) {
         this.id = id;
         this.title = title;
-        this.category = category;
         this.description = description;
         this.thumbnail = thumbnail;
         this.url = url;
+        this.category = category;
     }
 
     public Job() {
@@ -29,14 +30,6 @@ public class Job {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
     }
 
     public String getDescription() {
@@ -61,5 +54,13 @@ public class Job {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }

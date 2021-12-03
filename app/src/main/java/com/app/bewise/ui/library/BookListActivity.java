@@ -14,6 +14,7 @@ import com.app.bewise.R;
 import com.app.bewise.adapters.VerticalBooksListAdapter;
 import com.app.bewise.model.Book;
 import com.app.bewise.model.BookCategory;
+import com.app.bewise.model.Category;
 import com.app.bewise.provider.FirestoreMethods;
 
 import java.util.ArrayList;
@@ -51,17 +52,15 @@ public class BookListActivity extends AppCompatActivity {
     }
 
     private void updateUI(BookCategory category) {
-
-        Toast.makeText(BookListActivity.this, ""+category.toString(), Toast.LENGTH_SHORT).show();
         toolbar.setTitle(category.getTitle());
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getBooksByCategory();
+        getBooksByCategory(category);
     }
 
-    private void getBooksByCategory() {
+    private void getBooksByCategory(BookCategory category) {
 
-        methods.getAllBooks(new FirestoreMethods.ResponseListener() {
+        methods.getBookByCategory (category.getIdCategory()+"",new FirestoreMethods.ResponseListener() {
             @Override
             public void onSuccess(Object response) {
                 VerticalBooksListAdapter adapter = new VerticalBooksListAdapter(
