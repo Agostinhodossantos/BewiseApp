@@ -77,9 +77,9 @@ public class FirestoreMethods {
                 });
     }
 
-    public void getBookByCategory(String category, ResponseListener listener) {
+    public void getBookByCategory(int category, ResponseListener listener) {
         db.collection("books")
-                .whereEqualTo("category", category)
+                .whereEqualTo("title", "The Truth About Your Future")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override

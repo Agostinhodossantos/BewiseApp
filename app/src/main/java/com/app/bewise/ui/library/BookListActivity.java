@@ -60,7 +60,7 @@ public class BookListActivity extends AppCompatActivity {
 
     private void getBooksByCategory(BookCategory category) {
 
-        methods.getBookByCategory (category.getIdCategory()+"",new FirestoreMethods.ResponseListener() {
+        methods.getBookByCategory (category.getIdCategory(),new FirestoreMethods.ResponseListener() {
             @Override
             public void onSuccess(Object response) {
                 VerticalBooksListAdapter adapter = new VerticalBooksListAdapter(

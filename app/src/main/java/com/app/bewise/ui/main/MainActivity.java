@@ -10,8 +10,12 @@ import android.view.Menu;
 import android.widget.Toast;
 
 import com.app.bewise.R;
+import com.app.bewise.model.Book;
+import com.app.bewise.model.Category;
 import com.app.bewise.provider.AuthUser;
+import com.app.bewise.provider.FirestoreMethods;
 import com.app.bewise.ui.login.OnboardingActivity;
+import com.app.bewise.utils.Util;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -24,6 +28,9 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import java.util.Random;
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -69,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case  R.id.action_img:
-
                 if (AuthUser.isAuth()) {
                     Intent intent = new Intent(MainActivity.this, UserProfileActivity.class);
                     startActivity(intent);
@@ -88,5 +94,40 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void createBookTest() {
+        FirestoreMethods methods = new FirestoreMethods();
+        Random random = new Random(12);
+        Random random1 = new Random(0);
+
+        String[] arr = {
+                "https://firebasestorage.googleapis.com/v0/b/fb-api-2fc74.appspot.com/o/app_assets%2Fbook1.jpg?alt=media&token=471128ed-a3b1-4f54-b82a-552ad780b1d5",
+                "https://firebasestorage.googleapis.com/v0/b/fb-api-2fc74.appspot.com/o/app_assets%2Fbook3.jpeg?alt=media&token=eefe9380-4c97-4e6b-a9e9-13d3e4db29de",
+                "https://firebasestorage.googleapis.com/v0/b/fb-api-2fc74.appspot.com/o/app_assets%2Fbooks.jpeg?alt=media&token=ccb7eca2-8849-4792-a361-e7fcaeb2dc21"
+        };
+        for (int i = 0; i < Util.getCategory().size(); i++) {
+            Book book = new Book(UUID.randomUUID().toString(),
+                    "The Truth About Your Future",
+                    "NEW YORK TIMES BESTSELLER New York Times bestselling author and legendary investment guru Ric Edelman reveals his forward-thinking guide on how technology and science will reshape the way we save, invest, and plan for the future.Technology and science are evolving at a blistering, almost incomprehensible pace. The Human Genome Project took eleven years and $2.7 billion dollars to complete. ",
+                    "Ric Edelman",
+                    arr[random1.nextInt(arr.length)],
+                    "https://firebasestorage.googleapis.com/v0/b/fb-api-2fc74.appspot.com/o/app_assets%2FWeapons-of-Math-Destruction-Cathy-ONeil.pdf?alt=media&token=1d5cc79e-3f93-46d7-851a-ff3fffdf5c43",
+                    new Category(  random.nextInt(12), Util.getCategory().get(i).getIdCategory()));
+            methods.createBook(book, new FirestoreMethods.ResponseListener() {
+                @Override
+                public void onSuccess(Object response) {
+
+                }
+
+                @Override
+                public void onFailure(String message) {
+
+                }
+            });
+        }
+
+
+
     }
 }

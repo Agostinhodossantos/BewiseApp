@@ -42,7 +42,8 @@ public class JobsActivity extends AppCompatActivity {
     private void getMyJobs() {
         List<Job> jobList = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            Job job = new Job("", "", "","", "", "");
+            Category category = new Category(1,2);
+            Job job = new Job("", "", "","", "", category);
             jobList.add(job);
         }
 
