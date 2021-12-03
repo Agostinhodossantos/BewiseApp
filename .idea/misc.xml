@@ -56,9 +56,11 @@
         <entry key="app/src/main/res/layout/item_book_horizontal.xml" value="0.15260416666666668" />
         <entry key="app/src/main/res/layout/item_book_vertical.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.1634963768115942" />
+        <entry key="app/src/main/res/layout/item_chip.xml" value="0.13858695652173914" />
         <entry key="app/src/main/res/layout/item_input_search.xml" value="0.14427083333333332" />
         <entry key="app/src/main/res/layout/item_quick_start.xml" value="0.14427083333333332" />
         <entry key="app/src/main/res/layout/item_shimer_book.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/library_menu.xml" value="0.12037037037037036" />
       </map>
     </option>
   </component>
