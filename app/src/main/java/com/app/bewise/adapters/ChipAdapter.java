@@ -27,7 +27,7 @@ public class ChipAdapter extends RecyclerView.Adapter<ChipAdapter.MyViewHolder> 
     private List<ChipFilterModel> filterModelList;
     private FilterInterface.FilterListener filterLister;
 
-    public ChipAdapter(Context mContext, List<ChipFilterModel> filterModelList, FilterInterface.FilterListener) {
+    public ChipAdapter(Context mContext, List<ChipFilterModel> filterModelList, FilterInterface.FilterListener listener) {
         this.mContext = mContext;
         this.filterModelList = filterModelList;
         this.filterLister = filterLister;
